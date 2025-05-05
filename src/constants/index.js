@@ -3,74 +3,74 @@ import project2 from "../assets/projects/project-2.webp";
 import project3 from "../assets/projects/project-3.webp";
 import project4 from "../assets/projects/project-4.webp";
 
-export const HERO_CONTENT = `I am a passionate full stack developer with a knack for crafting robust and scalable web applications. With 5 years of hands-on experience, I have honed my skills in front-end technologies like React and Next.js, as well as back-end technologies like Node.js, MySQL, PostgreSQL, and MongoDB. My goal is to leverage my expertise to create innovative solutions that drive business growth and deliver exceptional user experiences.`;
+export const HERO_CONTENT = `I’m a frontend developer with a background in Information Science and a focus on creating intuitive, responsive web and mobile applications. Through academic projects and hackathons, I’ve gained hands-on experience with frameworks like React, Vue, Flutter, and Next.js. I’m also passionate about integrating machine learning to build smarter user experiences. Currently studying Web Development in Vancouver, I’m committed to writing clean, maintainable code and constantly exploring new technologies.`;
 
-export const ABOUT_TEXT = `I am a dedicated and versatile full stack developer with a passion for creating efficient and user-friendly web applications. With 5 years of professional experience, I have worked with a variety of technologies, including React, Next.js, Node.js, MySQL, PostgreSQL, and MongoDB. My journey in web development began with a deep curiosity for how things work, and it has evolved into a career where I continuously strive to learn and adapt to new challenges. I thrive in collaborative environments and enjoy solving complex problems to deliver high-quality solutions. Outside of coding, I enjoy staying active, exploring new technologies, and contributing to open-source projects.`;
+export const ABOUT_TEXT = `I am a frontend developer with a strong academic background in Information Science and hands-on experience in building web and mobile applications. My experience spans React, Vue.js, Flutter, and Next.js, gained through hackathons, academic research, and personal projects. I enjoy designing intuitive user interfaces and exploring how machine learning can enhance user experiences. Currently studying Web Development in Vancouver, I’m committed to writing clean, maintainable code and continuously expanding my technical skill set.`;
 
 export const EXPERIENCES = [
    {
-      year: "2023 - Present",
-      role: "Senior Full Stack Developer",
-      company: "Google Inc.",
-      description: `Led a team in developing and maintaining web applications using JavaScript, React.js, and Node.js. Implemented RESTful APIs and integrated with MongoDB databases. Collaborated with stakeholders to define project requirements and timelines.`,
-      technologies: ["Javascript", "React.js", "Next.js", "mongoDB"],
+      year: "2024 - Present",
+      role: "Web Development Student",
+      company: "Tamwood College, Vancouver",
+      description: `Currently enrolled in a diploma program focusing on frontend and backend development, responsive design, and modern web technologies. Gaining practical experience through coursework and collaborative projects.`,
+      technologies: ["HTML", "CSS", "JavaScript", "React", "Node.js"],
    },
    {
       year: "2022 - 2023",
-      role: "Frontend Developer",
-      company: "Adobe",
-      description: `Designed and developed user interfaces for web applications using Next.js and React. Worked closely with backend developers to integrate frontend components with Node.js APIs. Implemented responsive designs and optimized frontend performance.`,
-      technologies: ["HTML", "CSS", "Vue.js", "mySQL"],
+      role: "Flutter App Developer (Academic Project)",
+      company: "Doshisha University",
+      description: `Worked in a team to develop a Flutter-based mobile app that controls a prosthetic hand using biometric data. Focused on UI/UX design and Bluetooth sensor integration.`,
+      technologies: ["Flutter", "Dart", "Bluetooth API", "Biometric Sensors"],
    },
    {
-      year: "2021 - 2022",
-      role: "Full Stack Developer",
-      company: "Facebook",
-      description: `Developed and maintained web applications using JavaScript, React.js, and Node.js. Designed and implemented RESTful APIs for data communication. Collaborated with cross-functional teams to deliver high-quality software products on schedule.`,
-      technologies: ["Python", "Svelte", "Three.js", "Postgres"],
+      year: "2022",
+      role: "ML/NLP Research Assistant (Student Project)",
+      company: "Doshisha University",
+      description: `Built CNN-based image classification models and applied Japanese NLP techniques using MeCab for academic research. Achieved over 90% accuracy on evaluation datasets.`,
+      technologies: ["Python", "PyTorch", "NumPy", "OpenCV", "MeCab"],
    },
    {
-      year: "2020 - 2021",
-      role: "Software Engineer",
-      company: "Paypal",
-      description: `Contributed to the development of web applications using JavaScript, React.js, and Node.js. Managed databases and implemented data storage solutions using MongoDB. Worked closely with product managers to prioritize features and enhancements.`,
-      technologies: ["Ruby", "Rails", "PHP", "Sqlite"],
+      year: "2023",
+      role: "Frontend Developer (Hackathon Project)",
+      company: "Hackathon Team Project",
+      description: `Developed a secure text encryption/decryption web app using React and Firebase. Implemented multiple cipher algorithms and authentication flow.`,
+      technologies: ["React", "JavaScript", "Firebase", "Git"],
    },
 ];
 
 export const PROJECTS = [
    {
-      title: "E-Commerce Website",
+      title: "NLP & Image Classification Research",
       image: project1,
       description:
-         "A fully functional e-commerce website with features like product listing, shopping cart, and user authentication.",
-      technologies: ["HTML", "CSS", "React", "Node.js", "MongoDB"],
+         "Developed machine learning models for image classification using CNNs and implemented Japanese language processing using MeCab. Achieved 92% accuracy on test datasets.",
+      technologies: ["Python", "PyTorch", "NumPy", "OpenCV", "MeCab"],
    },
    {
-      title: "Task Management App",
+      title: "Text Encryption/Decryption Web App",
       image: project2,
       description:
-         "An application for managing tasks and projects, with features such as task creation, assignment, and progress tracking.",
-      technologies: ["HTML", "CSS", "Angular", "Firebase"],
+         "Built a web application that allows users to encrypt and decrypt text using algorithms like AES and RSA. Integrated Firebase for authentication and data handling.",
+      technologies: ["React", "JavaScript", "Firebase", "Git"],
    },
    {
-      title: "Portfolio Website",
+      title: "Biometric-Controlled Hearable App",
       image: project3,
       description:
-         "A personal portfolio website showcasing projects, skills, and contact information.",
-      technologies: ["HTML", "CSS", "React", "Bootstrap"],
+         "Created a Flutter mobile app that connects to biometric earphones and controls a prosthetic hand based on real-time sensor data. Designed a user-friendly interface for live monitoring.",
+      technologies: ["Flutter", "Dart", "Bluetooth API", "Sensors"],
    },
    {
-      title: "Blogging Platform",
+      title: "Personal Portfolio Website",
       image: project4,
       description:
-         "A platform for creating and publishing blog posts, with features like rich text editing, commenting, and user profiles.",
-      technologies: ["HTML", "CSS", "Vue.js", "Express", "mySQL"],
+         "A responsive portfolio website to showcase personal projects, skills, and contact information. Built using modern frontend tools and deployed as a static site.",
+      technologies: ["Next.js", "React", "Tailwind CSS", "TypeScript"],
    },
 ];
 
 export const CONTACT = {
-   address: "767 Fifth Avenue, New York, NY 10153 ",
-   phoneNo: "+12 4555 666 00 ",
-   email: "me@example.com",
+   address: "939 Home Street, Vancouver, BC, Canada",
+   phoneNo: "+1 (236)997-8351 ",
+   email: "ayumu.miyamoto9501@gmail.com ",
 };

@@ -67,7 +67,7 @@ const Hero = () => {
                      variants={childVariants}
                      className="bg-gradient-to-r from-stone-300 to-stone-600 bg-clip-text text-3xl tracking-tight text-transparent"
                   >
-                     Front End Developer
+                     Web Developer
                   </motion.span>
                   <motion.p
                      variants={childVariants}
@@ -77,7 +77,7 @@ const Hero = () => {
                   </motion.p>
                   <motion.a
                      variants={childVariants}
-                     href="/resume.pdf"
+                     href="../assets/resume_v2.pdf"
                      target="_blank"
                      rel="noopener noreferrer"
                      download
