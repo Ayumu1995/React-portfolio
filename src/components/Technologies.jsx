@@ -1,10 +1,9 @@
-import { BiLogoPostgresql } from "react-icons/bi";
-import { DiRedis } from "react-icons/di";
-import { FaNodeJs } from "react-icons/fa";
-import { RiReactjsLine } from "react-icons/ri";
-import { SiMongodb } from "react-icons/si";
+import { FaNodeJs, FaVuejs } from "react-icons/fa";
+import { RiFlutterFill, RiReactjsLine } from "react-icons/ri";
+import { SiDjango, SiThreedotjs } from "react-icons/si";
 import { TbBrandNextjs } from "react-icons/tb";
 import { motion } from "framer-motion";
+import { GrMysql } from "react-icons/gr";
 
 const iconVariants = (duration) => ({
    initial: { y: -10 },
@@ -52,7 +51,7 @@ const Technologies = () => {
                variants={iconVariants(3)}
                className="p-4"
             >
-               <SiMongodb className="text-7xl text-cyan-500" />
+               <SiDjango className="text-7xl text-green-800" />
             </motion.div>
             <motion.div
                initial="initial"
@@ -60,7 +59,7 @@ const Technologies = () => {
                variants={iconVariants(2)}
                className="p-4"
             >
-               <DiRedis className="text-7xl text-red-700" />
+               <RiFlutterFill className="text-7xl text-cyan-500" />
             </motion.div>
             <motion.div
                initial="initial"
@@ -76,7 +75,23 @@ const Technologies = () => {
                variants={iconVariants(4)}
                className="p-4"
             >
-               <BiLogoPostgresql className="text-7xl text-sky-700" />
+               <GrMysql className="text-7xl text-sky-400" />
+            </motion.div>
+            <motion.div
+               initial="initial"
+               animate="animate"
+               variants={iconVariants(3)}
+               className="p-4"
+            >
+               <SiThreedotjs className="text-7xl text-stone-200" />
+            </motion.div>
+            <motion.div
+               initial="initial"
+               animate="animate"
+               variants={iconVariants(5)}
+               className="p-4"
+            >
+               <FaVuejs className="text-7xl text-green-700" />
             </motion.div>
          </motion.div>
       </div>

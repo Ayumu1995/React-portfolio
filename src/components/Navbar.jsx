@@ -1,5 +1,6 @@
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import logo from "../assets/ayumu_m_logo.png";
+import { BsInstagram } from "react-icons/bs";
 const Navbar = () => {
    return (
       <nav className="flex items-center justify-between py-6">
@@ -26,12 +27,12 @@ const Navbar = () => {
                <FaGithub />
             </a>
             <a
-               href="http://linkedin.com/in/ayumu-miyamoto-937850336"
+               href="https://www.instagram.com/aym_miya?igsh=ZmJ0ZzF5MnJjMms%3D&utm_source=qr"
                target="_blank"
                rel="noopener noreferrer"
                aria-label="LinkedIn"
             >
-               <FaLinkedin />
+               <BsInstagram />
             </a>
          </div>
       </nav>
