@@ -16,6 +16,13 @@ export const EXPERIENCES = [
       technologies: ["HTML", "CSS", "JavaScript", "React", "Node.js"],
    },
    {
+      year: "2023",
+      role: "Frontend Developer (Hackathon Project)",
+      company: "Hackathon Team Project",
+      description: `Developed a secure text encryption/decryption web app using React and Firebase. Implemented multiple cipher algorithms and authentication flow.`,
+      technologies: ["React", "JavaScript", "Firebase", "Git"],
+   },
+   {
       year: "2022 - 2023",
       role: "Flutter App Developer (Academic Project)",
       company: "Doshisha University",
@@ -29,12 +36,22 @@ export const EXPERIENCES = [
       description: `Built CNN-based image classification models and applied Japanese NLP techniques using MeCab for academic research. Achieved over 90% accuracy on evaluation datasets.`,
       technologies: ["Python", "PyTorch", "NumPy", "OpenCV", "MeCab"],
    },
+];
+
+export const EDUCATIONS = [
    {
-      year: "2023",
-      role: "Frontend Developer (Hackathon Project)",
-      company: "Hackathon Team Project",
-      description: `Developed a secure text encryption/decryption web app using React and Firebase. Implemented multiple cipher algorithms and authentication flow.`,
-      technologies: ["React", "JavaScript", "Firebase", "Git"],
+      institution: "Tamwood College, Vancouver",
+      degree: "Diploma in Web Development",
+      period: "2024 – Present",
+      description:
+         "Comprehensive program focused on frontend and backend technologies, responsive design, and modern development practices. Covers full stack development using JavaScript, React, Node.js, and databases.",
+   },
+   {
+      institution: "Doshisha University, Japan",
+      degree: "Bachelor of Science in Information Science (On Leave)",
+      period: "2020 – Present",
+      description:
+         "Studied data structures, algorithms, machine learning, natural language processing, and database systems. Gained experience through research projects and academic competitions.",
    },
 ];
 
