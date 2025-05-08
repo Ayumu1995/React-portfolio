@@ -89,7 +89,7 @@ export const PROJECTS = [
 ];
 
 export const CONTACT = {
-   address: "939 Home Street, Vancouver, BC, Canada",
+   address: "Vancouver, BC, Canada",
    phoneNo: "+1 (236)997-8351 ",
    email: "ayumu.miyamoto9501@gmail.com ",
 };
