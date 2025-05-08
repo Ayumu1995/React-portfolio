@@ -13,7 +13,7 @@ const LoadingCircle = () => {
 
    if (hide) return null;
 
-   const radius = 90;
+   const radius = 100;
    const circumference = 2 * Math.PI * radius;
    const offset = circumference - (progress / 100) * circumference;
 

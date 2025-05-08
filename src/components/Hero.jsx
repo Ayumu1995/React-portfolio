@@ -1,4 +1,4 @@
-import profilePic from "../assets/raviKumarProfile.webp";
+import profilePic from "../assets/photo.jpeg";
 import { HERO_CONTENT } from "../constants";
 import { motion, stagger } from "framer-motion";
 import { useEffect, useState } from "react";
@@ -52,10 +52,10 @@ const Hero = () => {
                      src={profilePic}
                      alt="Ayumu Miyamoto"
                      className="border border-stone-900 rounded-3xl"
-                     width={650}
-                     height={650}
+                     width={450}
+                     height={500}
                      initial={{ x: 100, opacity: 0 }}
-                     animate={{ x: 0, opacity: isMobile ? 1 : 0.6 }}
+                     animate={{ x: 0, opacity: isMobile ? 1 : 0.8 }}
                      transition={{ duration: 1, delay: 1.5 }}
                   />
                </div>
@@ -87,7 +87,7 @@ const Hero = () => {
                   </motion.p>
                   <motion.a
                      variants={childVariants}
-                     href="../assets/resume_v2.pdf"
+                     href="../../public/resume_v2.pdf"
                      target="_blank"
                      rel="noopener noreferrer"
                      download
