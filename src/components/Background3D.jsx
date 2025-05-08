@@ -24,6 +24,11 @@ function ShaderSphere({ phase, hasPassedTech }) {
          }),
       []
    );
+   useFrame(({ clock, size, camera }) => {
+      shaderMaterial.uniforms.uTime.value = clock.getElapsedTime(); // 時間経過を毎フレーム更新
+      shaderMaterial.uniforms.uResolution.value.set(size.width, size.height);
+      shaderMaterial.uniforms.uCameraPosition.value.copy(camera.position);
+   });
 
    useFrame(() => {
       if (meshRef.current) {
