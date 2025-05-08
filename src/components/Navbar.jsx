@@ -1,5 +1,5 @@
 import { FaGithub, FaLinkedin } from "react-icons/fa";
-import logo from "../assets/ayumu_m_logo.png";
+import logo from "../assets/Ayumu_m_logo.png";
 import { BsInstagram } from "react-icons/bs";
 const Navbar = () => {
    return (
