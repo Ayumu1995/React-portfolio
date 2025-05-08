@@ -1,3 +1,4 @@
+// fragmentShader.js
 export default `
 precision mediump float;
 
@@ -13,30 +14,39 @@ vec3 getNormal(vec2 uv) {
 }
 
 void main() {
-    // 球体用のUV変換
     float mr = min(uResolution.x, uResolution.y);
     vec2 fragCoord = vUv * uResolution;
     vec2 uv = (fragCoord * 2.0 - uResolution.xy) / mr;
 
     float d = -uTime * 0.5;
     float a = 0.0;
+
     for (float i = 0.0; i < 8.0; ++i) {
         a += cos(i - d - a * uv.x);
         d += sin(uv.y * i + a);
     }
+
     d += uTime * 0.5;
-    vec3 col = vec3(cos(uv * vec2(d, a)) * 0.6 + 0.4, cos(a + d) * 0.5 + 0.5);
-    col = cos(col * cos(vec3(d, a, 2.5)) * 0.5 + 0.5);
 
+    // ベースカラー（シャイニーなカラー）
+    vec3 col = vec3(
+        cos(uv.x * d + a) * 0.5 + 0.5,
+        cos(uv.y * d - a) * 0.5 + 0.5,
+        sin(d + uv.y * 2.0) * 0.5 + 0.5
+    );
+
+    // 色をさらに波打たせる
+    col = cos(col * cos(vec3(d, a, 2.5)) * 0.9 + 0.5);
+
+    // 光源と陰影の追加
     vec3 normal = getNormal(vUv);
-    vec3 lightDir = normalize(vec3(0, 0.8, 1.0)); // 光の方向
-    float lighting = dot(normal, lightDir);         // 光の当たり具合
-    lighting = clamp(lighting, 0.0, 1.0);           // 0〜1に制限
+    vec3 lightDir = normalize(vec3(0.0, 0.8, 1.0));
+    float lighting = clamp(dot(normal, lightDir), 0.0, 1.0);
+    col *= lighting;
 
-    col *= lighting; // 色に陰影を掛ける
-    col = mix(col, vec3(0.7, 0.2, 0.7), 0.2);
+    // 若干白に寄せる（パール調）
+    col = mix(col, vec3(0.95), 0.28);
 
     gl_FragColor = vec4(col, 1.0);
 }
-
 `;

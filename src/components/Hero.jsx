@@ -1,6 +1,7 @@
 import profilePic from "../assets/raviKumarProfile.webp";
 import { HERO_CONTENT } from "../constants";
 import { motion, stagger } from "framer-motion";
+import { useEffect, useState } from "react";
 
 const containerVariants = {
    hidden: {
@@ -33,6 +34,15 @@ const childVariants = {
 };
 
 const Hero = () => {
+   const [isMobile, setIsMobile] = useState(false);
+
+   useEffect(() => {
+      const checkMobile = () => setIsMobile(window.innerWidth < 1024); // lg: 1024px
+      checkMobile();
+      window.addEventListener("resize", checkMobile);
+      return () => window.removeEventListener("resize", checkMobile);
+   }, []);
+
    return (
       <div className="pb-4 lg:mb-36">
          <div className="flex flex-wrap lg:flex-row-reverse">
@@ -45,7 +55,7 @@ const Hero = () => {
                      width={650}
                      height={650}
                      initial={{ x: 100, opacity: 0 }}
-                     animate={{ x: 0, opacity: 0.6 }}
+                     animate={{ x: 0, opacity: isMobile ? 1 : 0.6 }}
                      transition={{ duration: 1, delay: 1.5 }}
                   />
                </div>
