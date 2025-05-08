@@ -1,9 +1,10 @@
 import { motion } from "framer-motion";
 import { EXPERIENCES } from "../constants";
+import React, { forwardRef } from "react";
 
-const Experience = () => {
+const Experience = forwardRef((props, ref) => {
    return (
-      <div className="pb-4">
+      <div className="pb-4" ref={ref}>
          <motion.h2
             whileInView={{ opacity: 1, y: 0 }}
             initial={{ opacity: 0, y: -100 }}
@@ -48,6 +49,6 @@ const Experience = () => {
          </div>
       </div>
    );
-};
+});
 
 export default Experience;

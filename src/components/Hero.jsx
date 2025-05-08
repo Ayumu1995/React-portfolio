@@ -45,7 +45,7 @@ const Hero = () => {
                      width={650}
                      height={650}
                      initial={{ x: 100, opacity: 0 }}
-                     animate={{ x: 0, opacity: 1 }}
+                     animate={{ x: 0, opacity: 0.6 }}
                      transition={{ duration: 1, delay: 1.5 }}
                   />
                </div>
@@ -59,19 +59,19 @@ const Hero = () => {
                >
                   <motion.h2
                      variants={childVariants}
-                     className="pb-2 text-4xl tracking-tighter lg:text-8xl"
+                     className="pb-2 text-4xl tracking-tighter lg:text-8xl mix-blend-difference"
                   >
                      Ayumu Miyamoto
                   </motion.h2>
                   <motion.span
                      variants={childVariants}
-                     className="bg-gradient-to-r from-stone-300 to-stone-600 bg-clip-text text-3xl tracking-tight text-transparent"
+                     className="bg-gradient-to-r from-stone-300 to-stone-600 bg-clip-text text-3xl tracking-tight text-transparent  mix-blend-difference"
                   >
                      Web Developer
                   </motion.span>
                   <motion.p
                      variants={childVariants}
-                     className="my-2 max-w-lg py-6 text-xl leading-relaxed tracking-tighter"
+                     className="my-2 max-w-lg py-6 text-xl leading-relaxed tracking-tighter  mix-blend-difference"
                   >
                      {HERO_CONTENT}
                   </motion.p>

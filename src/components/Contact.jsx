@@ -1,9 +1,10 @@
 import { motion } from "framer-motion";
 import { CONTACT } from "../constants";
+import React, { forwardRef } from "react";
 
-const Contact = () => {
+const Contact = forwardRef((props, ref) => {
    return (
-      <div className="border-t border-stone-900 pb-20">
+      <div className="border-t border-stone-900 pb-20" ref={ref}>
          <motion.h2
             whileInView={{ opacity: 1, y: 0 }}
             initial={{ opacity: 0, y: -100 }}
@@ -35,6 +36,6 @@ const Contact = () => {
          </div>
       </div>
    );
-};
+});
 
 export default Contact;

@@ -4,6 +4,7 @@ import { SiDjango, SiThreedotjs } from "react-icons/si";
 import { TbBrandNextjs } from "react-icons/tb";
 import { motion } from "framer-motion";
 import { GrMysql } from "react-icons/gr";
+import React, { forwardRef } from "react";
 
 const iconVariants = (duration) => ({
    initial: { y: -10 },
@@ -17,9 +18,9 @@ const iconVariants = (duration) => ({
       },
    },
 });
-const Technologies = () => {
+const Technologies = forwardRef((props, ref) => {
    return (
-      <div className="pb-24">
+      <div className="pb-24" ref={ref}>
          <motion.h2
             whileInView={{ opacity: 1, y: 0 }}
             initial={{ opacity: 0, y: -100 }}
@@ -96,6 +97,6 @@ const Technologies = () => {
          </motion.div>
       </div>
    );
-};
+});
 
 export default Technologies;

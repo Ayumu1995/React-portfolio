@@ -3,7 +3,8 @@ import { useRef, useMemo } from "react";
 import * as THREE from "three";
 import vertexShader from "./shaders/vertexShader";
 import fragmentShader from "./shaders/fragmentShader";
-function ShaderSphere() {
+
+function ShaderSphere({ phase, hasPassedTech }) {
    const meshRef = useRef();
 
    const shaderMaterial = useMemo(
@@ -21,10 +22,33 @@ function ShaderSphere() {
       []
    );
 
-   useFrame(({ clock, size, camera }) => {
-      shaderMaterial.uniforms.uTime.value = clock.getElapsedTime();
-      shaderMaterial.uniforms.uResolution.value.set(size.width, size.height);
-      shaderMaterial.uniforms.uCameraPosition.value.copy(camera.position);
+   useFrame(() => {
+      if (meshRef.current) {
+         let targetX = 0,
+            targetY = 0;
+         let targetScale = hasPassedTech ? 3 : 1;
+
+         // phaseに応じた位置設定
+         if (phase === "tech") {
+            targetX = 6.0;
+         } else if (phase === "exp") {
+            targetX = -6.0;
+         } else if (phase === "contact") {
+            targetY = -4.5;
+         } else if (phase === "idle") {
+            // 🔁 一番上に戻ったとき：中央に戻す
+            targetX = 0;
+            targetY = 0;
+         }
+
+         // 補間アニメーション
+         meshRef.current.position.x += (targetX - meshRef.current.position.x) * 0.05;
+         meshRef.current.position.y += (targetY - meshRef.current.position.y) * 0.05;
+
+         meshRef.current.scale.setScalar(
+            meshRef.current.scale.x + (targetScale - meshRef.current.scale.x) * 0.05
+         );
+      }
    });
 
    return (
@@ -34,7 +58,8 @@ function ShaderSphere() {
       </mesh>
    );
 }
-export default function Background3D() {
+
+export default function Background3D({ phase, hasPassedTech }) {
    return (
       <Canvas
          style={{
@@ -49,7 +74,7 @@ export default function Background3D() {
          camera={{ position: [0, 0, 5], fov: 75 }}
       >
          <ambientLight />
-         <ShaderSphere />
+         <ShaderSphere phase={phase} hasPassedTech={hasPassedTech} />
       </Canvas>
    );
 }

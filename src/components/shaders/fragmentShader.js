@@ -34,6 +34,7 @@ void main() {
     lighting = clamp(lighting, 0.0, 1.0);           // 0〜1に制限
 
     col *= lighting; // 色に陰影を掛ける
+    col = mix(col, vec3(0.7, 0.2, 0.7), 0.2);
 
     gl_FragColor = vec4(col, 1.0);
 }

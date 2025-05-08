@@ -3,9 +3,11 @@ import project2 from "../assets/projects/project-2.webp";
 import project3 from "../assets/projects/project-3.webp";
 import project4 from "../assets/projects/project-4.webp";
 
-export const HERO_CONTENT = `I’m a frontend developer with a background in Information Science and a focus on creating intuitive, responsive web and mobile applications. Through academic projects and hackathons, I’ve gained hands-on experience with frameworks like React, Vue, Flutter, and Next.js. I’m also passionate about integrating machine learning to build smarter user experiences. Currently studying Web Development in Vancouver, I’m committed to writing clean, maintainable code and constantly exploring new technologies.`;
+export const HERO_CONTENT =
+   "I’m a frontend web and mobile application developer with an Information Science background, specializing in building intuitive, responsive web and mobile applications. Working on academic projects and at hackathons, I have had practical exposure to React, Vue, Flutter, and Next.js. Apart from that, I’m interested in implementing machine learning to create intelligent user experiences. Now a Web Development student based out of Vancouver, I ensure that clean, readable code is delivered and continuously look for new technologies to discover.";
 
-export const ABOUT_TEXT = `I am a frontend developer with a strong academic background in Information Science and hands-on experience in building web and mobile applications. My experience spans React, Vue.js, Flutter, and Next.js, gained through hackathons, academic research, and personal projects. I enjoy designing intuitive user interfaces and exploring how machine learning can enhance user experiences. Currently studying Web Development in Vancouver, I’m committed to writing clean, maintainable code and continuously expanding my technical skill set.`;
+export const ABOUT_TEXT =
+   "I am a frontend developer with a solid academic background in Information Science and practical experience building web and mobile applications. My exposure to React, Vue.js, Flutter, and Next.js has come from hackathons, research at university, and side projects. I love crafting intuitive user interfaces and investigating machine learning applications for improving the user experience. Studying Web Development at present in Vancouver, I am devoted to creating clean, readable code and constantly building on my technical capabilities.";
 
 export const EXPERIENCES = [
    {
@@ -82,7 +84,7 @@ export const PROJECTS = [
       image: project4,
       description:
          "A responsive portfolio website to showcase personal projects, skills, and contact information. Built using modern frontend tools and deployed as a static site.",
-      technologies: ["Next.js", "React", "Tailwind CSS", "TypeScript"],
+      technologies: ["Next.js", "React", "Tailwind CSS", "TypeScript", "Git", "Vercel", "Threejs"],
    },
 ];
 
