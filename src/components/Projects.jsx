@@ -8,7 +8,7 @@ const Projects = () => {
             whileInView={{ opacity: 1, y: 0 }}
             initial={{ opacity: 0, y: -100 }}
             transition={{ duration: 0.5 }}
-            className="my-20 text-center text-4xl"
+            className="my-20 text-center text-4xl mix-blend-difference"
          >
             Projects
          </motion.h2>
@@ -35,11 +35,15 @@ const Projects = () => {
                      transition={{ duration: 1 }}
                      className="w-full max-w-xl lg:w-3/4"
                   >
-                     <h3 className="mb-2 font-semibold text-2xl">{Projects.title}</h3>
-                     <p className="mb-4 text-stone-400">{Projects.description}</p>
+                     <h3 className="mb-2 font-semibold text-2xl mix-blend-difference">
+                        {Projects.title}
+                     </h3>
+                     <p className="mb-4 text-stone-400 mix-blend-difference">
+                        {Projects.description}
+                     </p>
                      {Projects.technologies.map((tech, index) => (
                         <span
-                           className="mr-2 rounded bg-stone-900 p-2 text-sm font-medium text-stone-300"
+                           className="mr-2 rounded bg-stone-900 p-2 text-sm font-medium text-stone-300  mix-blend-difference"
                            key={index}
                         >
                            {tech}

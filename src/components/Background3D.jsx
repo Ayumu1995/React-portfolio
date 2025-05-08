@@ -3,6 +3,7 @@ import { useRef, useMemo } from "react";
 import * as THREE from "three";
 import vertexShader from "./shaders/vertexShader";
 import fragmentShader from "./shaders/fragmentShader";
+import ReflectorPlane from "./ReflectorPlane";
 
 function ShaderSphere({ phase, hasPassedTech }) {
    const meshRef = useRef();
@@ -18,6 +19,8 @@ function ShaderSphere({ phase, hasPassedTech }) {
                uCameraPosition: { value: new THREE.Vector3() },
             },
             side: THREE.DoubleSide,
+            transparent: false,
+            depthWrite: true,
          }),
       []
    );
@@ -69,12 +72,15 @@ export default function Background3D({ phase, hasPassedTech }) {
             zIndex: -1,
             width: "100vw",
             height: "100vh",
-            pointerEvents: "none",
+            // pointerEvents: "none",
          }}
-         camera={{ position: [0, 0, 5], fov: 75 }}
+         camera={{ position: [0, 1, 5], fov: 75 }}
       >
          <ambientLight />
+         <directionalLight position={[5, 5, 5]} intensity={1.2} />
          <ShaderSphere phase={phase} hasPassedTech={hasPassedTech} />
+         {/* <ReflectorPlane visible={phase === "idle"} /> */}
+         <ReflectorPlane visible={true} />
       </Canvas>
    );
 }

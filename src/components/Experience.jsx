@@ -9,7 +9,7 @@ const Experience = forwardRef((props, ref) => {
             whileInView={{ opacity: 1, y: 0 }}
             initial={{ opacity: 0, y: -100 }}
             transition={{ duration: 0.5 }}
-            className="my-20 text-center text-4xl"
+            className="my-20 text-center text-4xl mix-blend-difference"
          >
             Experience
          </motion.h2>
@@ -22,7 +22,9 @@ const Experience = forwardRef((props, ref) => {
                      transition={{ duration: 1 }}
                      className="w-full lg:w-1/4"
                   >
-                     <p className="mb-2 text-sm text-stone-400">{experience.year}</p>
+                     <p className="mb-2 text-sm text-stone-400 mix-blend-difference">
+                        {experience.year}
+                     </p>
                   </motion.div>
                   <motion.div
                      whileInView={{ opacity: 1, x: 0 }}
@@ -30,14 +32,18 @@ const Experience = forwardRef((props, ref) => {
                      transition={{ duration: 1 }}
                      className="w-full max-w-xl lg:w-3/4"
                   >
-                     <h3 className="mb-2 font-semibold">
+                     <h3 className="mb-2 font-semibold mix-blend-difference">
                         {experience.role} -{" "}
-                        <span className="text-sm text-stone-500">{experience.company}</span>
+                        <span className="text-sm text-stone-500 mix-blend-difference">
+                           {experience.company}
+                        </span>
                      </h3>
-                     <p className="mb-4 text-stone-400 ">{experience.description}</p>
+                     <p className="mb-4 text-stone-400 mix-blend-difference">
+                        {experience.description}
+                     </p>
                      {experience.technologies.map((tech, index) => (
                         <span
-                           className="mr-2 mt-4 rounded bg-stone-900 px-2 py-1 text-sm font-medium text-stone-300"
+                           className="mr-2 mt-4 rounded bg-stone-900 px-2 py-1 text-sm font-medium text-stone-300 mix-blend-difference"
                            key={index}
                         >
                            {tech}
