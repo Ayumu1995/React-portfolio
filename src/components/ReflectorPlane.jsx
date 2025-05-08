@@ -18,7 +18,7 @@ export default function ReflectorPlane({ visible }) {
    return (
       <mesh
          rotation={[-Math.PI / 2 + 0.2, 0, 0]} // ← 10〜15度前傾させる
-         position={[0, -2.0, 0]}
+         position={[0, -1.8, 0]}
          renderOrder={-1}
       >
          <planeGeometry args={[10, 10, 256, 256]} />

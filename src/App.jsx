@@ -6,15 +6,27 @@ import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
 import Projects from "./components/Projects";
 import Technologies from "./components/Technologies";
+import LoadingCircle from "./components/LoadingCircle";
 
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState, useRef, Suspense } from "react";
+import { useProgress } from "@react-three/drei";
 
 const App = () => {
    const [phase, setPhase] = useState("idle");
    const [hasPassedTech, setHasPassedTech] = useState(false);
+   const [showLoading, setShowLoading] = useState(true);
+   const { progress } = useProgress();
    const techRef = useRef(null);
    const expRef = useRef(null);
    const contactRef = useRef(null);
+
+   useEffect(() => {
+      if (progress === 100) {
+         const timeout = setTimeout(() => setShowLoading(false), 300);
+         return () => clearTimeout(timeout);
+      }
+   }, [progress]);
+
    useEffect(() => {
       const sections = [
          { ref: techRef, key: "tech" },
@@ -56,6 +68,7 @@ const App = () => {
 
    return (
       <div className="overflow-x-hidden text-stone-300 antialiased">
+         {showLoading && <LoadingCircle />}
          <div className="fixed inset-0 -z-10">
             <div className="absolute top-0 z-[-2] h-screen w-screen bg-neutral-950 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]" />
          </div>
