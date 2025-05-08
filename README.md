@@ -4,6 +4,8 @@ This project is a fully responsive personal portfolio built using **React**, **V
 
 It showcases advanced usage of **Three.js**, **GLSL**, and **React hooks** with animated sections, a realistic reflective floor, and a visually rich loading screen.
 
+👉 **Live Demo**: [https://my-first-react-portfolio-two.vercel.app/](https://my-first-react-portfolio-two.vercel.app/)
+
 ---
 
 ## ✨ Features
