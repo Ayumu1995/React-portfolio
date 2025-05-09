@@ -38,8 +38,8 @@ It showcases advanced usage of **Three.js**, **GLSL**, and **React hooks** with 
 ## 🚀 Getting Started
 
 ```bash
-git clone https://github.com/Ayumu1995/React-portfolio
-cd React-portfolio
+git clone https://github.com/Ayumu1995/React-portfolio-with-Three.js
+cd React-portfolio-with-Three.js
 npm install
 npm run dev
 ```
